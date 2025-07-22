@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+  
+    /* dégradé radial + noise */
+    background-image:
+      radial-gradient(ellipse at 50% 0%, rgba(255,255,255,0.04) 0%, transparent 70%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.8' numOctaves='4' seed='9'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.15'/%3E%3C/svg%3E");
+    background-size: cover, 220px;
+  }
+  

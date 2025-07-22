@@ -1,0 +1,83 @@
+.card {
+  width: var(--card-w);
+  height: calc(var(--card-w) * var(--ratio) + 155px);
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.image,
+.placeholder {
+  width: 100%;
+  height: calc(var(--card-width) * var(--card-img-ratio));
+  object-fit: cover;
+  background: #27272f;
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.body {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 0.4rem;
+}
+
+.rating {
+  font-size: 0.9rem;
+  color: #f9b401;
+  margin-bottom: 0.6rem;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.detailBtn,
+.wishlistBtn {
+  all: unset;
+  cursor: pointer;
+  border-radius: var(--radius);
+  text-align: center;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.detailBtn {
+  background: var(--color-secondary);
+  color: red;
+}
+
+.wishlistBtn {
+  background: #555;
+  color: white;
+}
+
+.wishlistBtn[disabled] {
+  background: #ff7070;
+  cursor: default;
+  color: white;
+}

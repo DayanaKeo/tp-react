@@ -1,0 +1,21 @@
+:root {
+    --color-bg: #09090b;              
+    --color-surface: #15151a;         /* cartes / sections */
+    --color-surface-hover: #1e1e25;
+  
+    /* Accents inchangés */
+    --color-primary: #ad8231;         
+    --color-secondary: #005a9c;       
+    --color-text: #ffffff;
+    --color-text-muted: #bbbbbb;
+  
+    --radius: 10px;
+    --shadow: 0 6px 18px rgba(0,0,0,0.55);
+
+    --card-width: 180px;
+    --card-img-ratio: calc(3 / 2);
+  
+    /* font-family: 'Montserrat', system-ui, sans-serif; */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  }
+  

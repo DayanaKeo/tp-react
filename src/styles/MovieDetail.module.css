@@ -1,0 +1,113 @@
+.container {
+    padding: 2rem 1rem 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    color: var(--color-text);
+  }
+  
+  .loading,
+  .error {
+    text-align: center;
+    margin: 3rem 0;
+    font-size: 1.2rem;
+  }
+  
+  .error {
+    color: var(--color-primary);
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+  
+  @media (min-width: 720px) {
+    .header {
+      flex-direction: row;
+    }
+  }
+  
+  .poster {
+    width: 220px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  
+  .info {
+    flex: 1;
+  }
+  
+  .meta {
+    margin: 0.3rem 0 1rem;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+  
+  .overview {
+    line-height: 1.5;
+  }
+  
+  .wishlistBtn {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: var(--radius);
+    background: #ff7070;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .wishlistBtn[disabled] {
+    background: #ff7070;
+  }
+  
+  .section {
+    margin-top: 2.5rem;
+  }
+  
+  .section h2 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+  }
+  
+  .actors {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .actors li {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  
+  .actors img,
+  .actorPlaceholder {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    border-radius: var(--radius);
+    margin-bottom: 0.4rem;
+    background: #2e2e36;
+  }
+  
+  .character {
+    display: block;
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+    margin-top: 0.2rem;
+  }
+  
+  .grid {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1.4rem;
+  }
+  
