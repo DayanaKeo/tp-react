@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import MovieCard from '../components/MovieCard';
 import {
   fetchMovies,
@@ -17,17 +17,26 @@ function MovieList() {
   const [movies, setMovies] = useState([]);
   const [category, setCategory] = useState('popular');
   const [query, setQuery] = useState('');
+  const [debouncedQuery, setDebouncedQuery] = useState('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
+  // Debounce de la recherche
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedQuery(query);
+    }, 500);
+    return () => clearTimeout(handler);
+  }, [query]);
+
   const loadMovies = async () => {
     setLoading(true);
     try {
       const data =
-        query.trim() !== ''
-          ? await searchMovies(query, page)
+        debouncedQuery.trim() !== ''
+          ? await searchMovies(debouncedQuery, page)
           : await fetchMovies(category, page);
 
       setMovies(data.results || []);
@@ -43,11 +52,11 @@ function MovieList() {
 
   useEffect(() => {
     loadMovies();
-  }, [category, query, page]);
+  }, [category, debouncedQuery, page]);
 
   useEffect(() => {
     setPage(1);
-  }, [category, query]);
+  }, [category, debouncedQuery]);
 
   return (
     <div className={styles.container}>
