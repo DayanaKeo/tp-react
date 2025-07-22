@@ -1,6 +1,9 @@
 const API_KEY = '0c92854ee15be0c1f75bb4718a7e9cd7';
 const BASE_URL = 'https://api.themoviedb.org/3';
 
+// const API_KEY = import.meta.env.VITE_API_KEY;
+// const BASE_URL = import.meta.env.VITE_BASE_URL;
+
 export const fetchMovies = (category, page = 1) =>
   fetch(`${BASE_URL}/movie/${category}?api_key=${API_KEY}&page=${page}`).then(res => res.json());
 
