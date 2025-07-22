@@ -10,7 +10,6 @@ const BASE_URL = 'https://api.themoviedb.org/3';
 
 app.use(cors());
 
-// Proxy pour toutes les requêtes TMDB
 app.get('/api/tmdb/*', async (req, res) => {
   try {
     const endpoint = req.params[0];
@@ -29,10 +28,3 @@ app.get('/api/tmdb/*', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Proxy TMDB en écoute sur http://localhost:${PORT}`);
 });
-
-/*
-Exemple d'appel côté client :
-fetch('http://localhost:3001/api/tmdb/movie/popular?page=1')
-  .then(res => res.json())
-  .then(data => console.log(data));
-*/ 
