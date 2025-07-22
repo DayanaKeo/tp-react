@@ -4,6 +4,7 @@ import styles from '../styles/Wishlist.module.css';
 
 function Wishlist() {
   const { wishlist, removeFromWishlist } = useWishlist();
+
   if (wishlist.length === 0) {
     return (
       <div className={styles.empty}>
@@ -38,14 +39,18 @@ function Wishlist() {
 
             <div className={styles.body}>
               <h3 className={styles.movieTitle}>{movie.title}</h3>
-            </div>
-            <button
+              <button
               type="button"
-              onClick={() => removeFromWishlist(movie.id)}
+              onClick={() => {
+                console.log("Bouton supprimer cliqué pour id :", movie.id);
+                removeFromWishlist(movie.id);
+              }}
               className={styles.removeBtn}
             >
               Supprimer
             </button>
+            </div>
+            
           </div>
         ))}
       </div>

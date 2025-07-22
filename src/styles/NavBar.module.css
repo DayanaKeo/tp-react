@@ -1,11 +1,12 @@
 .navbar {
-    /* background: rgba(15, 15, 16, 0.9); */
+    background: rgba(15, 15, 16, 0.9);
     backdrop-filter: blur(6px);
-    border-bottom: 1px solid var(--color-surface-hover);
+    border-bottom: 1px solid #1e1e25;
     padding: 0.8rem 0;
     position: sticky;
     top: 0;
     z-index: 100;
+    color: #fff;
   }
   
   .container {
@@ -20,7 +21,7 @@
   .logo {
     font-size: 1.4rem;
     font-weight: 700;
-    color: var(--color-primary);
+    color: #dc2026;
   }
   
   .links {
@@ -30,22 +31,22 @@
   
   .link {
     text-decoration: none;
-    color: var(--color-text-muted);
+    color: #bbbbbb;
     font-weight: 500;
     position: relative;
     transition: color 0.2s;
   }
   
   .link:hover {
-    color: var(--color-text);
+    color: #ffffff;
   }
   
   .active {
-    color: var(--color-text);
+    color: #ffffff;
   }
   
   .badge {
-    background: var(--color-primary);
+    background: #dc2026;
     color: #fff;
     font-size: 0.7rem;
     padding: 0.2rem 0.5rem;

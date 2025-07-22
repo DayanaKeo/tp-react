@@ -2,7 +2,8 @@
     padding: 2rem 1rem;
     max-width: 1200px;
     margin: 0 auto;
-    color: var(--color-text);
+    color: #ffffff;
+    background-color: #09090b;
   }
   
   .controls {
@@ -17,10 +18,10 @@
     flex: 1;
     min-width: 220px;
     padding: 0.55rem 0.8rem;
-    border-radius: var(--radius);
+    border-radius: 10%;
     border: none;
-    background: var(--color-surface);
-    color: var(--color-text);
+    background: #15151a;
+    color: #ffffff;
   }
   
   .categories {
@@ -32,20 +33,20 @@
     all: unset;
     cursor: pointer;
     padding: 0.45rem 0.9rem;
-    border-radius: var(--radius);
-    background: var(--color-surface);
-    color: var(--color-text-muted);
+    border-radius: 10px;
+    background: #15151a;
+    color: #bbbbbb;
     font-size: 0.85rem;
     transition: background 0.2s;
   }
   
   .catBtn:hover {
-    background: var(--color-surface-hover);
+    background: #1e1e25;
   }
   
   .active {
-    background: var(--color-primary);
-    color: var(--color-text);
+    background: #dc2026;
+    color: #ffffff;
   }
   
   .grid {
@@ -55,7 +56,7 @@
   }
   
   .error {
-    color: var(--color-primary);
+    color: #dc2026;
     margin-top: 1rem;
   }
   

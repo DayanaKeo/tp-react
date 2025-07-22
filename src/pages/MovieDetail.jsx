@@ -62,7 +62,7 @@ function MovieDetail() {
         <div className={styles.info}>
           <h1>{movie.title}</h1>
           <p className={styles.meta}>
-            Sortie&nbsp;: {movie.release_date} • ⭐ {movie.vote_average.toFixed(1)}
+            Sortie&nbsp;: {movie.release_date} • ⭐ {movie.vote_average.toFixed(1)}
           </p>
           <p className={styles.overview}>{movie.overview}</p>
 
@@ -71,12 +71,11 @@ function MovieDetail() {
             className={styles.wishlistBtn}
             disabled={inWishlist}
           >
-            {inWishlist ? '✅ Déjà dans la wishlist' : 'Ajouter à la wishlist'}
+            {inWishlist ? '✅ Déjà dans la wishlist' : 'Ajouter à la wishlist'}
           </button>
         </div>
       </div>
 
-      {/* Acteurs principaux */}
       <section className={styles.section}>
         <h2>Acteurs principaux</h2>
         <ul className={styles.actors}>
@@ -88,7 +87,7 @@ function MovieDetail() {
                   alt={actor.name}
                 />
               ) : (
-                <div className={styles.actorPlaceholder}>No Img</div>
+                <div className={styles.actorPlaceholder}>No Img</div>
               )}
               <p>{actor.name}</p>
               <span className={styles.character}>

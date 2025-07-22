@@ -21,13 +21,7 @@ export const WishlistProvider = ({ children }) => {
   };
 
   const removeFromWishlist = (id) => {
-    console.log("Suppression demandée pour l'id :", id);
-    setWishlist((prev) => {
-      const filtered = prev.filter((m) => String(m.id) !== String(id));
-      console.log("Avant suppression :", prev);
-      console.log("Après suppression :", filtered);
-      return filtered;
-    });
+    setWishlist((prev) => prev.filter((m) => String(m.id) !== String(id)));
   };
 
   return (

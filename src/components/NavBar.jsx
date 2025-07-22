@@ -18,7 +18,7 @@ function Navbar() {
             className={({ isActive }) =>
               isActive ? `${styles.link} ${styles.active}` : styles.link
             }
-            end        /* pour que '/' ne reste pas actif sur les sous‑routes */
+            end
           >
             Accueil
           </NavLink>
